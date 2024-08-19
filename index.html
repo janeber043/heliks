@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 
+	
+   </head>
+   
+   <style>
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.container{
+  max-width: 400px; //original value is 700px
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+ // width: calc(100% / 2 - 20px); // ge comment ra nko
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 24px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #FFBF00;
+}
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+
+
+select {
+  width: 100%;
+  padding: 12px;
+  border: 0 !important;
+  background-color: #FFBF00;
+  /* needed */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* SVG background image */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Ctitle%3Edown-arrow%3C%2Ftitle%3E%3Cg%20fill%3D%22%23000000%22%3E%3Cpath%20d%3D%22M10.293%2C3.293%2C6%2C7.586%2C1.707%2C3.293A1%2C1%2C0%2C0%2C0%2C.293%2C4.707l5%2C5a1%2C1%2C0%2C0%2C0%2C1.414%2C0l5-5a1%2C1%2C0%2C1%2C0-1.414-1.414Z%22%20fill%3D%22%23000000%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-size: .6em;
+  background-position: calc(100% - 1.3em) center;
+  background-repeat: no-repeat;
+  
+  line-height: 50px;
+  -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 0 20px;
+  font-size: 16px;
+  
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  
+  
+}
+select::-ms-expand {
+ display: none;
+}
+
+   
+   </style>
+   
+   
+<body>
+  <div class="container">
+    <!-- <div class="title">Heliksys</div>-->
+    
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+		    
+			<span class="details" style="text-align:left">Transaction</span>
+			<select id="product" style="font-size: 22px" onchange="products()">
+            <option selected="selected">GCash</option>
+			<option>Maya</option>
+			<option>Shopee</option>
+			<option>PayPal</option>
+			<option>Banks</option>
+			</select>
+		    <span class="details"></span>
+			<span class="details"></span>
+			<span class="details"></span>
+			<span class="details"></span>		  	 
+            <span class="details" style="text-align:left">Amount</span>
+            <input type="text" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]+/g, '');"  maxlength="5" placeholder="Enter amount" required id="transAmount" onfocus="emptyfields()">
+			<span class="details"></span>
+			<span class="details"></span>
+			<span class="details"></span>
+			<span class="details"></span>
+			<span class="details" style="text-align:left" >Service Charge</span>
+            <input type="text"  id="servicecharge" style="color: red; font-weight: bold" disabled>
+			<span class="details"></span>
+			<span class="details"></span>
+			<span class="details"></span>
+			<span class="details"></span>
+			<span class="details" style="text-align:left">Total<span style="font-size:13px;font-style:italic">&nbsp;&nbsp;&nbsp;(You may enter <b><u>cash-out</u></b> amount below!)</span></span>
+			<!--uses a text type but forces the appearance of the numeric keyboard-->
+            <input type="text" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]+/g, '');" required id="total" onfocus="emptyfields();" maxlength="5" >
+			</br></br></br>
+			<span class="details" style="text-align:left">Amount received</span>
+            <input type="text" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]+/g, '');"  onfocus="this.value='';calChange(); theamountreceived.style.color = 'black';" placeholder="Enter amount received" required id="amountreceived" maxlength="5" disabled>
+			<span class="details"></span>
+			<span class="details"></span>
+			<span class="details"></span>
+			<span class="details"></span>
+			<span class="details" style="text-align:left">Change</span>
+            <input type="text" style="color: red; font-weight: bold" required id="change" disabled>
+          </div>
+        </div>
+       
+       </form>
+   
+  </div>
+
+<!--Script-->
+<script>
+
+//declaration of variables
+var theproduct=document.getElementById('product'); //items in the dropdown
+var thetransAmount=document.getElementById('transAmount'); //transaction Amount
+var theservicecharge=document.getElementById('servicecharge');  //service charge
+var thetotal=document.getElementById('total'); //transaction total
+var theamountreceived=document.getElementById('amountreceived'); //amount recieved
+var thechange=document.getElementById('change'); //change
+var cashIn_flag=0;
+var cashOut_flag=0;
+
+//declaration of event listeners or event handlers
+thetransAmount.addEventListener("input",cashIn); //calculate the service charge one transaction amount has been entered
+thetotal.addEventListener("input",cashOut);
+theamountreceived.addEventListener("input", calChange); //calculate change once payment received
+//theproduct.addEventListener("change",product);
+
+
+
+//reset fields
+function emptyfields(){
+transAmount.value="";
+servicecharge.value="";
+total.value="";
+amountreceived.value="";
+thechange.value="";
+
+thetransAmount.style.color = "black";
+thetotal.style.color = "black";
+theamountreceived.style.color = "black";
+
+theamountreceived.disabled=true;
+
+thetransAmount.style.backgroundColor = "";
+thetotal.style.backgroundColor = "";
+}
+
+//compute the change
+function calChange(){
+var change=0;
+change=theamountreceived.value - thetotal.value;
+
+thechange.value=change.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+//compute the charge
+function calCharge(amount){
+let charge_per_thousand=15;
+let charge=10;
+let prod_charge=prodCharge(theproduct.value);
+
+//Less than 1000
+if(amount >=  1 && amount <=100){ charge=5 ;}
+
+if(amount >=101 && amount <=700){ charge=10;}
+
+if(amount >=701 && amount<=1000){ charge=15;}
+
+
+//Above 1000
+//if(amount >=1001 && amount<=1250){ charge=20;}
+
+//if(amount >=1251 && amount<=1500){ charge=25;}
+
+//if(amount >=1501 && amount<=2000){ charge=30;}
+
+if(amount > 1000){
+
+let thousand= parseInt(amount / 1000); // 
+let thousand_rem= amount % 1000; //
+
+let charge_for_rem=0;  //remainder charge;
+
+if(thousand_rem >=1   && thousand_rem <=250)   { charge_for_rem=5; } else
+if(thousand_rem >=251 && thousand_rem <=500)   { charge_for_rem=10;} else
+if(thousand_rem >=501 && thousand_rem <=2000)  { charge_for_rem=15;}
+
+charge = /*thousand_rem;*/(thousand * charge_per_thousand) + charge_for_rem;
+}
+
+charge=charge + prod_charge ;
+
+return charge;		
+}
+
+//change in products
+function products(){
+	if(cashIn_flag==1){
+		cashIn();}
+	if(cashOut_flag==1){
+		cashOut();}
+}
+
+//charge for products
+function prodCharge(prodValue){
+let prod_charge=0;
+	
+	if(!prodValue.includes("GCash")){
+		prod_charge=15;
+	}else{
+		prod_charge=0;
+	}
+
+return prod_charge;
+}
+
+
+//amount for cash in
+function cashIn(){
+cashIn_flag=1;
+cashOut_flag=0;
+
+let cashIn_value=parseFloat(thetransAmount.value);
+let charge=calCharge(cashIn_value);
+let cashOut_value= cashIn_value + charge;
+
+theservicecharge.value=charge;
+thetotal.value=cashOut_value;
+
+theamountreceived.disabled=false;
+
+thetotal.style.backgroundColor = "#FFFF80";
+
+if(isNaN(charge) || isNaN(cashOut_value)){
+emptyfields();
+}
+}
+
+//amount for cash out
+function cashOut(){
+cashIn_flag=0;
+cashOut_flag=1;
+let temp_cashOut_value=parseFloat(thetotal.value); //710
+let charge=calCharge(temp_cashOut_value); //15
+
+let cashOut_value=temp_cashOut_value - charge; // 710 - 15 =695
+charge=calCharge(cashOut_value); //10
+
+let cashIn_value= temp_cashOut_value - charge; //
+
+theservicecharge.value=charge;
+thetransAmount.value=cashIn_value;
+
+theamountreceived.disabled=false;
+
+thetransAmount.style.backgroundColor = "#FFFF80";
+
+if(isNaN(charge) || isNaN(temp_cashOut_value)){
+emptyfields();
+}
+}
+</script>
+</body>
+</html>
